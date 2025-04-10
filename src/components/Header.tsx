@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 const Header: React.FC = () => {
     const [state, setState] = useState<boolean>(false);
 
