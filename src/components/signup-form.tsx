@@ -9,7 +9,7 @@ export default function SignupForm() {
     console.log("Form submitted");
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
+    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent  border border-gray-700">
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
         Welcome to Crew Canvas
       </h2>
@@ -35,14 +35,24 @@ export default function SignupForm() {
         </LabelInputContainer>
 
         <button
-          className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-purple-700 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
+          className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-purple-700 to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Sign up &rarr;
+          Register &rarr;
           <BottomGradient />
         </button>
 
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+        <p className=" max-w-sm text-sm text-white mb-1">
+          Not a User, <span className="font-bold">Create an account</span>:
+        </p>
+        <button
+          className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-purple-700 to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] -mb-5 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
+          type="submit"
+        >
+          Register &rarr;
+          <BottomGradient />
+        </button>
       </form>
     </div>
   );
