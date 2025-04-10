@@ -1,16 +1,17 @@
-import LoginForm from "./components/loginForm";
-import SignupForm from "./components/signup-form";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
+import LoginPage from "./Pages/LoginPage";
 
 export default function App() {
-  return (
-    <>
-      <div className="flex flex-wrap gap-10 ">
-        {" "}
-        <SignupForm />
-       
-        < LoginForm />
-        
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div className="flex flex-col gap-10 justify-center  ">
+                <Header />
+                <LoginPage />
+                <Footer />
+                {/* <LoginForm /> */}
+            </div>
+        </>
+    );
 }
