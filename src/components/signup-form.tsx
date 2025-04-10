@@ -9,7 +9,7 @@ export default function SignupForm() {
     console.log("Form submitted");
   };
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent  border border-gray-700">
+    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent  border border-[#27272A]">
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
         Welcome to Crew Canvas
       </h2>

@@ -13,13 +13,13 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={`bg-transparent pb-5 md:text-sm ${
+      className={` pb-5 md:text-sm flex items-center justify-center mt-16  ${
         state
           ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0 "
           : ""
       }`}
     >
-      <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+      <div className="fixed gap-x-14 items-center w-full max-w-[75%] border border-[#27272A] backdrop-blur-sm bg-transparent rounded-xl mx-auto md:flex md:px-8" style={{ WebkitBackdropFilter: "blur(4px)", backdropFilter: "blur(4px)" }}>
         <div className="flex items-center justify-between py-5 md:block">
           {/* logo here */}
           {/* <a href="javascript:void(0)">
