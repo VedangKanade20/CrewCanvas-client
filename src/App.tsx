@@ -1,10 +1,16 @@
-import SignupFormDemo from "./components/signup-form-demo";
+import LoginForm from "./components/loginForm";
+import SignupForm from "./components/signup-form";
 
 export default function App() {
   return (
     <>
-      <SignupFormDemo />
+      <div className="flex flex-wrap gap-10 ">
+        {" "}
+        <SignupForm />
+       
+        < LoginForm />
+        
+      </div>
     </>
   );
 }
-  
