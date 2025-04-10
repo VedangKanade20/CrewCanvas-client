@@ -1,4 +1,4 @@
-import { Highlight } from "./ui/hero-highlight";
+import { Highlight } from "./ui/heroHighlight";
 
 import { motion } from "framer-motion";
 import Header from "./Header";
