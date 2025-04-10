@@ -13,13 +13,19 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={` pb-5 md:text-sm flex items-center justify-center mt-16  ${
+      className={` pb-5 md:text-sm flex items-center justify-center mt-16 z-50 ${
         state
           ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0 "
           : ""
       }`}
     >
-      <div className="fixed gap-x-14 items-center w-full max-w-[75%] border border-[#27272A] backdrop-blur-sm bg-transparent rounded-xl mx-auto md:flex md:px-8" style={{ WebkitBackdropFilter: "blur(4px)", backdropFilter: "blur(4px)" }}>
+      <div
+        className="fixed gap-x-14 items-center w-full max-w-[75%] border border-[#27272A] bg-transparent/30 backdrop-blur-sm rounded-xl mx-auto md:flex md:px-8"
+        style={{
+          WebkitBackdropFilter: "blur(4px)",
+          backdropFilter: "blur(4px)",
+        }}
+      >
         <div className="flex items-center justify-between py-5 md:block">
           {/* logo here */}
           {/* <a href="javascript:void(0)">
@@ -30,7 +36,9 @@ const Header: React.FC = () => {
                             alt="Float UI logo"
                         />
                     </a> */}
-          <div className="text-white text-2xl "> logo here</div>
+          <div className=" text-2xl font-custom italic font-semibold bg-gradient-to-l from-purple-300  to-blue-400 bg-clip-text text-transparent">
+            CrewCanvas
+          </div>
           <div className="md:hidden">
             <button
               className="menu-btn text-white hover:text-gray-800"
