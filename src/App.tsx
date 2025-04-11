@@ -11,7 +11,7 @@ import LandingPage from "./Pages/LandingPage";
 export default function App() {
   return (
     <>
-      <div className="flex flex-col gap-10 justify-start items-center bg-gradient-to-br   from-[#0f0f13] to-black min-h-screen">
+      <div className="flex flex-col gap-10 justify-start items-center bg-gradient-to-br   from-[#0f0f13] to-black min-h-screen overflow-hidden">
         <LandingPage />
         {/* <SignupForm /> */}
 
