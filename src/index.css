@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 @theme inline {
   --shadow-input: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
@@ -7,6 +7,7 @@
 }
 @theme {
   --font-custom: "Winky Sans", sans-serif;
+  --font-custom-2: "Raleway", sans-serif;
 }
 @theme inline {
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;

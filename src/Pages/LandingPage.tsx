@@ -1,3 +1,4 @@
+import FeatureSection from "@/components/FeatureSection";
 import HeroSectionOne from "@/components/HeroSection";
 import LabelButton from "@/components/Label-button";
 import { Divider } from "@heroui/react";
@@ -24,6 +25,7 @@ const LandingPage = () => {
             </div>
             <Divider className="w-[80%] h-1 bg-gradient-to-r from-purple-800/10 to-blue-400/10 mb-10" />
             <LabelButton label={"Features"} />
+            <FeatureSection/>
         </>
     );
 };
