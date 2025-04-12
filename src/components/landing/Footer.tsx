@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-        <footer className="text-gray-500 bg-transparent px-4 py-5 max-w-screen mx-auto md:px-8 relative ">
-            <div className="my-8 h-[1px] w-screen bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
+        <footer className="text-gray-500 bg-transparent py-5 w-full px-[12.5%] mx-auto md:px-8 relative ">
+            <div className="my-8 h-[1px]  bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
             <div className="mt-8 flex-col  items-center justify-between sm:flex">
                 <h1 className="text-gray-500 text-4xl font-custom-2 font-bold mb-6">
                     CrewCanvas

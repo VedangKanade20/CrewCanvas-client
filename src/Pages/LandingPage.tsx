@@ -1,11 +1,10 @@
-import FeatureSection from "@/components/Features/FeatureSection";
+import FeatureSection from "@/components/landing/Features/FeatureSection";
 import HeroSectionOne from "@/components/landing/HeroSection";
 import LabelButton from "@/components/landing/Labelbutton";
 const LandingPage = () => {
     return (
         <>
             <HeroSectionOne />
-
             <div className="p-2 rounded-full border border-[#171717] flex justify-center items-center translate-y-2 animate-bounce">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +23,8 @@ const LandingPage = () => {
             </div>
             <div className="my-8 h-[1px] w-screen bg-gradient-to-r from-transparent via-purple-300 to-transparent dark:via-purple-700" />
             <LabelButton label={"Features"} />
+            <br />
+            <br />
             <FeatureSection />
         </>
     );

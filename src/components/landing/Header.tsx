@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { BottomGradient } from "./Auth/LoginFormCard";
+import { BottomGradient } from "../Auth/LoginFormCard";
 const Header: React.FC = () => {
     const [state, setState] = useState<boolean>(false);
 

@@ -20,7 +20,7 @@ const icons = [
 
 export function FloatingIcons() {
     return (
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="fixed inset-0 pointer-events-none  overflow-hidden">
             {icons.map((icon, index) => (
                 <FloatingIcon key={index} icon={icon} index={index} />
             ))}
