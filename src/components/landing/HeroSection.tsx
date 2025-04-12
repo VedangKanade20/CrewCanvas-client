@@ -1,9 +1,9 @@
-import { Highlight } from "./ui/hero-highlight";
+import { Highlight } from "../ui/hero-highlight";
 
 import { motion } from "framer-motion";
 import Header from "./Header";
-import { Spotlight } from "./ui/spotlight";
-import { BottomGradient } from "./LoginFormCard";
+import { Spotlight } from "../ui/spotlight";
+import { BottomGradient } from "../Auth/LoginFormCard";
 import { FloatingIcons } from "./FloatingIcons";
 
 export default function HeroSectionOne() {

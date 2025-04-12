@@ -1,8 +1,12 @@
-import Footer from "./components/Footer";
+
+import Footer from "./components/landing/Footer";
+import ForgotPasswordFormCard from "./components/Auth/ForgotPasswordFormCard";
+import ResetPasswordFormCard from "./components/Auth/ResetPasswordFormCard";
+
 // // import Header from "./components/Header";
 // import HeroSectionOne from "./components/HeroSection";
 import LandingPage from "./Pages/LandingPage";
-// import SignupForm from "./components/signup-form";
+import SignupForm from "./components/Auth/SignupFormCard";
 // import { FlipWords } from "./components/ui/flip-words";
 
 
@@ -13,8 +17,10 @@ export default function App() {
     <>
       <div className="flex flex-col gap-10 justify-start items-center bg-gradient-to-br   from-[#0f0f13] to-black min-h-screen overflow-hidden">
         <LandingPage />
-        {/* <SignupForm /> */}
-
+        <SignupForm />
+        <ResetPasswordFormCard/>
+        < ForgotPasswordFormCard/>
+        
         <Footer />
         
       </div>

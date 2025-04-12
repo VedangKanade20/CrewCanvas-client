@@ -1,6 +1,6 @@
-import FeatureSection from "@/components/FeatureSection";
-import HeroSectionOne from "@/components/HeroSection";
-import LabelButton from "@/components/Label-button";
+import FeatureSection from "@/components/Features/FeatureSection";
+import HeroSectionOne from "@/components/landing/HeroSection";
+import LabelButton from "@/components/landing/Labelbutton";
 const LandingPage = () => {
     return (
         <>
