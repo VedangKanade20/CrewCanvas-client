@@ -13,7 +13,7 @@ const Header: React.FC = () => {
 
     return (
         <nav
-            className={`pb-5 md:text-sm flex items-center justify-center z-50 ${
+            className={`pb-5 md:text-sm flex items-center justify-center z-100 ${
                 state
                     ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
                     : ""
