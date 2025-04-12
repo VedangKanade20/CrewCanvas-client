@@ -8,7 +8,7 @@ import { FloatingIcons } from "./FloatingIcons";
 
 export default function HeroSectionOne() {
     return (
-        <div className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center font-custom-2">
+        <div className="relative mx-auto mt-16 flex max-w-7xl flex-col items-center justify-center font-custom-2">
             <Header />
             <div className="px-4 py-10 md:py-20 mt-16">
                 <FloatingIcons />

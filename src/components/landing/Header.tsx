@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-
 import { BottomGradient } from "../Auth/LoginFormCard";
+
 const Header: React.FC = () => {
     const [state, setState] = useState<boolean>(false);
 
@@ -13,78 +13,88 @@ const Header: React.FC = () => {
 
     return (
         <nav
-            className={` pb-5 md:text-sm flex items-center justify-center mt-16 z-50 ${
+            className={`pb-5 md:text-sm flex items-center justify-center z-50 ${
                 state
-                    ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0 "
+                    ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0"
                     : ""
             }`}
         >
             <div
-                className="fixed gap-x-14 items-center w-full max-w-[75%] border border-[#27272A] bg-transparent/30 backdrop-blur-sm rounded-xl mx-auto md:flex md:px-8"
+                className="fixed inset-x-0 mx-auto w-[90%] max-w-screen-xl md:px-8 border border-[#27272A] bg-transparent/30 backdrop-blur-sm rounded-xl flex flex-col md:flex-row items-center md:justify-between px-4 gap-x-6 md:gap-x-14"
                 style={{
                     WebkitBackdropFilter: "blur(4px)",
                     backdropFilter: "blur(4px)",
                 }}
             >
-                <div className="flex items-center justify-between py-5 md:block">
-                    {/* logo here */}
-                    {/* <a href="javascript:void(0)">
-                        <img
-                            src="https://www.floatui.com/logo.svg"
-                            width={120}
-                            height={50}
-                            alt="Float UI logo"
-                        />
-                    </a> */}
-                    <div className=" text-2xl font-custom italic font-semibold bg-gradient-to-l from-purple-300  to-blue-400 bg-clip-text text-transparent">
+                <div className="flex items-center justify-between w-full py-5 md:w-auto">
+                    <div className="text-2xl font-custom italic font-semibold bg-gradient-to-l from-purple-300 to-blue-400 bg-clip-text text-transparent">
                         CrewCanvas
                     </div>
                     <div className="md:hidden">
                         <button
-                            className="menu-btn text-white hover:text-gray-800"
+                            className="menu-btn text-white hover:text-gray-600 duration-300 "
                             onClick={() => setState(!state)}
                         >
                             {state ? (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-6 w-6"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
+                                <button className="border border-[#171717] hover:text-white  p-2 rounded-full hover:scale-110 duration-400 hover:rotate-90">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        className="icon icon-tabler icons-tabler-outline icon-tabler-x"
+                                    >
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        />
+                                        <path d="M18 6l-12 12" />
+                                        <path d="M6 6l12 12" />
+                                    </svg>
+                                </button>
                             ) : (
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="w-6 h-6"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                                    />
-                                </svg>
+                                <button className="border border-[#171717] hover:text-neutral-400  p-2 rounded-full hover:scale-115 duration-400 ">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        className="icon icon-tabler icons-tabler-outline icon-tabler-menu-3"
+                                    >
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        />
+                                        <path d="M10 6h10" />
+                                        <path d="M4 12h16" />
+                                        <path d="M7 12h13" />
+                                        <path d="M4 18h10" />
+                                    </svg>
+                                </button>
                             )}
                         </button>
                     </div>
                 </div>
 
                 <div
-                    className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
-                        state ? "block" : "hidden"
-                    } `}
+                    className={`w-full md:w-auto flex-1 items-center mt-4 md:mt-0 transition-all duration-300 ease-in-out ${
+                        state
+                            ? "max-h-96 opacity-100 scale-100"
+                            : "max-h-0 opacity-0 scale-95 overflow-hidden"
+                    } md:flex md:max-h-full md:opacity-100 md:scale-100`}
                 >
-                    <div className="flex-1 gap-x-2 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0 ">
+                    <div className="flex gap-x-4 max-md:pb-5 md:gap-x-4 w-full justify-center md:justify-end items-center">
                         <a
-                            className="group/btn relative py-[9px] px-5 rounded-md  font-medium text-white hover:shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  hover:dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center group"
+                            className="group/btn relative py-[9px] px-5 rounded-md font-medium text-white hover:shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] hover:dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center justify-center"
                             href=""
                         >
                             Log In
@@ -105,7 +115,7 @@ const Header: React.FC = () => {
                             <BottomGradient />
                         </a>
                         <a
-                            className="group/btn relative py-[9px] px-5 rounded-md bg-[#27272A] font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center group"
+                            className="group/btn relative py-[9px] px-5 rounded-md bg-[#27272A] font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center justify-center"
                             href=""
                         >
                             Sign Up
