@@ -16,7 +16,7 @@ export default function HeroSectionOne() {
                     className="top-40 left-20 md:-top-20 md:left-60"
                     fill="white"
                 />
-                <h1 className="relative z-10 mx-auto max-w-4xl text-center  leading-[1.15] text-2xl font-extrabold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
+                <h1 className="relative z-10 mx-auto max-w-4xl text-center  leading-[1.15] text-3xl font-extrabold max-md:w-full text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
                     {`Where Teams Create, Collaborate, and Conquer Together`
                         .split(" ")
                         .map((word, index) => {
@@ -105,13 +105,13 @@ export default function HeroSectionOne() {
                         duration: 0.3,
                         delay: 1.2,
                     }}
-                    className="relative  mt-20 flex justify-center items-center rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md dark:border-neutral-800 dark:bg-neutral-900 z-0"
+                    className="relative  mt-20 flex justify-center items-center rounded-3xl border border-neutral-200 bg-neutral-100 p-2 shadow-md dark:border-neutral-800 dark:bg-neutral-900 z-0 "
                 >
-                    <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700 flex justify-center items-center">
+                    <div className="w-full overflow-hidden rounded-xl border border-gray-300  dark:border-gray-700 flex justify-center items-center">
                         <img
                             src="/image.png"
                             alt="Landing page preview"
-                            className="aspect-[16/9] h-auto w-full object-cover"
+                            className="w-full object-cover h-[400px] md:h-auto"
                             height={1000}
                             width={1000}
                         />

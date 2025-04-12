@@ -20,7 +20,7 @@ const Header: React.FC = () => {
             }`}
         >
             <div
-                className="fixed inset-x-0 mx-auto w-[90%] max-w-screen-xl md:px-8 border border-[#27272A] bg-transparent/30 backdrop-blur-sm rounded-xl flex flex-col md:flex-row items-center md:justify-between px-4 gap-x-6 md:gap-x-14"
+                className="fixed inset-x-0 mx-auto w-[90%] max-w-screen-xl md:px-8 border border-[#27272A] bg-transparent/30 backdrop-blur-sm rounded-xl flex flex-col md:flex-row items-center md:justify-between px-4 gap-x-6 md:gap-x-14 "
                 style={{
                     WebkitBackdropFilter: "blur(4px)",
                     backdropFilter: "blur(4px)",
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
                     </div>
                     <div className="md:hidden">
                         <button
-                            className="menu-btn text-white hover:text-gray-600 duration-300 "
+                            className="menu-btn text-white hover:text-gray-600 duration-100 "
                             onClick={() => setState(!state)}
                         >
                             {state ? (
@@ -86,10 +86,10 @@ const Header: React.FC = () => {
                 </div>
 
                 <div
-                    className={`w-full md:w-auto flex-1 items-center mt-4 md:mt-0 transition-all duration-300 ease-in-out ${
+                    className={`w-full md:w-auto flex-1 items-center mt-4 md:mt-0 transition-all  duration-300 ${
                         state
                             ? "max-h-96 opacity-100 scale-100"
-                            : "max-h-0 opacity-0 scale-95 overflow-hidden"
+                            : "max-h-0  opacity-0 scale-95 overflow-hidden"
                     } md:flex md:max-h-full md:opacity-100 md:scale-100`}
                 >
                     <div className="flex gap-x-4 max-md:pb-5 md:gap-x-4 w-full justify-center md:justify-end items-center">
