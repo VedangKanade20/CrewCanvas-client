@@ -23,7 +23,7 @@ const FeatureTabData = (props: props) => {
             className="w-1/2 flex flex-col gap-5 text-white items-start max-md:w-full max-lg:w-[85%]"
         >
             <div
-                className={`px-7  py-7 ${css}  rounded-2xl text-[32px] flex justify-center items-center z-50`}
+                className={`px-7  py-7 ${css}  rounded-2xl max-md:px-5 max-md:py-5 flex justify-center items-center z-50`}
             >
                 {props.icon}
             </div>
