@@ -2,16 +2,16 @@ const Footer = () => {
     return (
         <footer className="text-gray-500 bg-transparent py-5 w-full px-[12.5%] mx-auto md:px-8 relative ">
             <div className="my-8 h-[1px]  bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
-            <div className="mt-8 flex-col  items-center justify-between sm:flex">
+            <div className="mt-8 flex-col  items-center justify-between sm:flex max-md:text-center">
                 <h1 className="text-gray-500 text-4xl font-custom-2 font-bold mb-6">
                     CrewCanvas
                 </h1>
 
-                <div className="mt-4 sm:mt-0">
+                <div className="mt-4 sm:mt-0 text-center max-md:text-center">
                     &copy; Crew Canvas 2025 UI All rights reserved.
                 </div>
                 {/* links for social */}
-                <div className=" flex items-center gap-7 mt-10">
+                <div className=" flex items-center gap-7 mt-10 max-md:justify-center">
                     <button className="border border-[#171717] hover:text-white p-3 rounded-full hover:scale-130 duration-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ const Footer = () => {
                             <path d="M9 18c-4.51 2-5-2-7-2" />
                         </svg>
                     </button>
-                    <button className="border border-[#171717] hover:text-white  p-3 rounded-full hover:scale-130 duration-400">
+                    <button className="border border-[#171717] hover:text-white  p-3 rounded-full hover:scale-130 duration-400 max-md:text-center">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
