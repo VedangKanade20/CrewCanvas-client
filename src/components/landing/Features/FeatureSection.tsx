@@ -29,7 +29,7 @@ const sections = [
     {
         left: true,
         icon: (
-            <PenTool className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-cyan-500 size-8 " />
+            <PenTool className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] shadow-3xl transition duration-500 text-cyan-500 size-8 " />
         ),
         title: "AI-Powered Task Matching",
         description:
@@ -40,7 +40,7 @@ const sections = [
     {
         left: false,
         icon: (
-            <NotebookPen className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-green-500 size-8 " />
+            <NotebookPen className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] shadow-3xl transition duration-500 text-green-500 size-8 " />
         ),
         title: "Verified Reviews & Ratings",
         description:
@@ -51,41 +51,41 @@ const sections = [
     {
         left: true,
         icon: (
-            <ListTodo className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
+            <ListTodo className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition shadow-3xl duration-500 text-yellow-500 size-8 " />
         ),
         title: "Smart Task Organizer",
         description:
             "Organize, prioritize, and manage your freelance projects effortlessly with our intuitive dashboard and productivity tools.",
-        leftColor: "bg-[#362B0B]",
+        leftColor: "bg-yellow-500/20",
         rightColor: "bg-[#15120A]",
     },
     {
         left: false,
         icon: (
-            <MessageCircleMore className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
+            <MessageCircleMore className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(200,100,100,1)] shadow-3xl transition duration-500 text-red-500/80 size-8 " />
         ),
         title: "Real-time Messaging",
         description:
             "Seamless communication between clients and freelancers with our integrated real-time chat system.",
 
         leftColor: "bg-[#371517]",
-        rightColor: "bg-[#150C0D]",
+        rightColor: "bg-red-500/10",
     },
     {
         left: true,
         icon: (
-            <Users className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
+            <Users className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(0,0,255,1)] transition shadow-3xl duration-500 text-blue-500 size-8 " />
         ),
         title: "Team Collaboration",
         description:
             "Invite teammates, assign tasks, and manage workflows together, all in one place.",
         leftColor: "bg-[#13213A]",
-        rightColor: "bg-[#0C1016]",
+        rightColor: "bg-blue-500/15",
     },
     {
         left: false,
         icon: (
-            <Mic className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
+            <Mic className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,0,255,1)] transition shadow-3xl duration-500 text-purple-500 size-8 " />
         ),
         title: "Voice Commands",
         description:
@@ -97,11 +97,21 @@ const sections = [
 
 const FeatureSection = () => {
     return (
-        <div className="flex flex-col gap-32">
-            {sections.map((sec, i ) => (
+        <div className="flex flex-col gap-25">
+            <div className="text-stransparent w-full flex justify-center items-center flex-col gap-5 mb-10 max-lg:mb-5 max-md:mb-2 bg-gradient-to-r from-indigo-500 to-purple-500  bg-clip-text text-transparent ">
+                <h1 className="text-5xl font-semibold">
+                    Everything you need to collaborate
+                </h1>
+                <p className="text-lg text-neutral-400 mt-2 max-md:text-sm max-lg:text-md  text-center px-[30%]">
+                    CrewCanvas combines the best collaboration tools in one
+                    seamless platform, helping your team work together more
+                    effectively.
+                </p>
+            </div>
+            {sections.map((sec, i) => (
                 <motion.div
                     key={i}
-                    className="flex gap-20 max-lg:flex-col justify-center items-center max-lg:items-start"
+                    className="flex gap-20 max-lg:flex-col justify-center items-center duration-500 max-lg:items-start max-md:items-center"
                     variants={fadeInUp}
                     initial="hidden"
                     whileInView="visible"
@@ -116,11 +126,19 @@ const FeatureSection = () => {
                                 description={sec.description}
                                 color={sec.leftColor}
                             />
-                            <FeatureTabCard color={sec.rightColor} icon={sec.icon} iconSize={40} /> 
+                            <FeatureTabCard
+                                color={sec.rightColor}
+                                icon={sec.icon}
+                                iconSize={40}
+                            />
                         </>
                     ) : (
                         <>
-                            <FeatureTabCard color={sec.rightColor} icon={sec.icon} iconSize={40} /> 
+                            <FeatureTabCard
+                                color={sec.rightColor}
+                                icon={sec.icon}
+                                iconSize={40}
+                            />
                             <FeatureTabData
                                 icon={sec.icon}
                                 title={sec.title}

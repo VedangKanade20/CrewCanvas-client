@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
+import { Spotlight } from "@/components/ui/spotlight-new";
 
-import { Spotlight } from "../ui/spotlight";
 import { BottomGradient } from "../Auth/LoginFormCard";
 import { FloatingIcons } from "./FloatingIcons";
 import { Highlight } from "../ui/hero-highlight";
@@ -15,13 +15,9 @@ export default function HeroSectionOne() {
             ref={sectionRef}
             className="relative mx-auto mt-10 flex max-w-7xl flex-col items-center justify-center font-custom-2"
         >
-            
+            <Spotlight />
             <div className="px-4 py-10 md:py-20 mt-16">
                 <FloatingIcons />
-                <Spotlight
-                    className="top-40 left-20 md:-top-20 md:left-60"
-                    fill="white"
-                />
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
