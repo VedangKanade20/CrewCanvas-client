@@ -20,10 +20,10 @@ const FeatureTabData = (props: props) => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-1/2 flex flex-col gap-5 text-white items-start max-md:w-full max-lg:w-[85%]"
+            className="w-[40%] flex flex-col gap-5 text-white items-start max-md:w-full max-lg:w-[85%] "
         >
             <div
-                className={`px-7  py-7 ${css}  rounded-2xl max-md:px-5 max-md:py-5 flex justify-center items-center z-50`}
+                className={`px-7 py-7 ${css} rounded-2xl max-md:px-5 max-md:py-5 flex justify-center items-center z-50`}
             >
                 {props.icon}
             </div>

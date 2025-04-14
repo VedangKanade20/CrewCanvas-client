@@ -29,7 +29,7 @@ const sections = [
     {
         left: true,
         icon: (
-            <PenTool className="drop-shadow-[0_0_15px_rgba(0,255,255,0.5)] text-white" />
+            <PenTool className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-cyan-500 size-8 " />
         ),
         title: "AI-Powered Task Matching",
         description:
@@ -40,18 +40,18 @@ const sections = [
     {
         left: false,
         icon: (
-            <NotebookPen className="drop-shadow-[0_0_15px_rgba(0,255,255,0.5)] text-white" />
+            <NotebookPen className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-green-500 size-8 " />
         ),
         title: "Verified Reviews & Ratings",
         description:
             "Build trust with a transparent review system. All feedback is verified to ensure authenticity and maintain high service standards.",
-        leftColor: "bg-[#0E2E1C]",
+        leftColor: "bg-[#0E2E1A]",
         rightColor: "bg-[#0B130F]",
     },
     {
         left: true,
         icon: (
-            <ListTodo className="drop-shadow-[0_0_15px_rgba(0,255,255,0.5)] text-white" />
+            <ListTodo className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
         ),
         title: "Smart Task Organizer",
         description:
@@ -62,42 +62,43 @@ const sections = [
     {
         left: false,
         icon: (
-            <MessageCircleMore className="drop-shadow-[0_0_15px_rgba(0,255,255,0.5)] text-white" />
+            <MessageCircleMore className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
         ),
         title: "Real-time Messaging",
         description:
             "Seamless communication between clients and freelancers with our integrated real-time chat system.",
-        leftColor: "bg-[#13213A]",
-        rightColor: "bg-[#0C1016]",
+
+        leftColor: "bg-[#371517]",
+        rightColor: "bg-[#150C0D]",
     },
     {
         left: true,
         icon: (
-            <Users className="drop-shadow-[0_0_15px_rgba(0,255,255,0.5)] text-white" />
+            <Users className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
         ),
         title: "Team Collaboration",
         description:
             "Invite teammates, assign tasks, and manage workflows together, all in one place.",
-        leftColor: "bg-[#091215]",
-        rightColor: "bg-[#091215]",
+        leftColor: "bg-[#13213A]",
+        rightColor: "bg-[#0C1016]",
     },
     {
         left: false,
         icon: (
-            <Mic className="drop-shadow-[0_0_15px_rgba(0,255,255,0.5)] text-white" />
+            <Mic className="drop-shadow-[0_0_6px_rgba(255,255,255,0.5)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,1)] transition duration-300 text-white size-8 " />
         ),
         title: "Voice Commands",
         description:
             "Control your workflow with voice-enabled actions for a hands-free productivity boost.",
-        leftColor: "bg-[#091215]",
-        rightColor: "bg-[#091215]",
+        leftColor: "bg-purple-950/50",
+        rightColor: "bg-purple-950/15",
     },
 ];
 
 const FeatureSection = () => {
     return (
         <div className="flex flex-col gap-32">
-            {sections.map((sec, i) => (
+            {sections.map((sec, i ) => (
                 <motion.div
                     key={i}
                     className="flex gap-20 max-lg:flex-col justify-center items-center max-lg:items-start"
@@ -115,11 +116,11 @@ const FeatureSection = () => {
                                 description={sec.description}
                                 color={sec.leftColor}
                             />
-                            <FeatureTabCard color={sec.rightColor} />
+                            <FeatureTabCard color={sec.rightColor} icon={sec.icon} iconSize={40} /> 
                         </>
                     ) : (
                         <>
-                            <FeatureTabCard color={sec.rightColor} />
+                            <FeatureTabCard color={sec.rightColor} icon={sec.icon} iconSize={40} /> 
                             <FeatureTabData
                                 icon={sec.icon}
                                 title={sec.title}

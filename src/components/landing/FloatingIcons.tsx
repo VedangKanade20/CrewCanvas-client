@@ -12,7 +12,7 @@ import {
 const icons = [
     { Icon: MessageSquare, color: "text-blue-500", size: 24 },
     { Icon: FileText, color: "text-green-500", size: 26 },
-    { Icon: Users, color: "text-white", size: 30 },
+    { Icon: Users, color: "text-red-500", size: 30 },
     { Icon: PenTool, color: "text-cyan-500", size: 28 },
     { Icon: CheckSquare, color: "text-orange-500", size: 26 },
     { Icon: Mic, color: "text-purple-500", size: 24 },

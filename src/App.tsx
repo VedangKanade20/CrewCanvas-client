@@ -7,12 +7,14 @@ import SignupForm from "./components/Auth/SignupFormCard";
 import ResetPasswordFormCard from "./components/Auth/ResetPasswordFormCard";
 import ForgotPasswordFormCard from "./components/Auth/ForgotPasswordFormCard";
 
+
 export default function App() {
     return (
         <Router>
-            <div className="flex flex-col gap-10 justify-start items-center w-screen px-[12.5%] bg-gradient-to-br from-[#0f0f13] to-black min-h-screen">
+            <div className="flex flex-col gap-10 justify-start items-center w-screen  bg-gradient-to-br from-[#0f0f13] to-black min-h-screen">
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
+                    {/* <Route path="/dashboard" element={<SideBar />} /> */}
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/signup" element={<SignupForm />} />
                     <Route
