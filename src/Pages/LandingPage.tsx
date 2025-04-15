@@ -1,4 +1,5 @@
 import FeatureSection from "@/components/landing/Features/FeatureSection";
+import Footer from "@/components/landing/Footer";
 import Header from "@/components/landing/Header";
 import HeroSectionOne from "@/components/landing/HeroSection";
 import LabelButton from "@/components/landing/Labelbutton";
@@ -28,6 +29,7 @@ const LandingPage = () => {
             <br />
             <br />
             <FeatureSection />
+            <Footer />
         </div>
     );
 };

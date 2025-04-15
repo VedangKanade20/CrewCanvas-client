@@ -1,22 +1,16 @@
 import React from "react";
-import {
-    Home,
-    Search,
-    Bell,
-    HelpCircle,
-    Moon,
-    ChevronDown,
-} from "lucide-react";
+import { Home } from "lucide-react";
+import { BottomGradient } from "../Auth/ForgotPasswordFormCard";
 
 const DashboardHeader: React.FC = () => {
     return (
-        <header className=" w-full flex items-center justify-between px-6 py-3 bg-[#0e0e10] text-white shadow-sm">
+        <header className=" w-full flex items-center absolute top-1 justify-between px-6   bg-transparent text-white shadow-sm pt-4 ">
             {/* Left Section: Logo + Nav */}
             <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-purple-500">
-                    CollabSpace
-                </span>
-                <div className="flex items-center ml-6 gap-1 text-white hover:text-purple-500 cursor-pointer">
+                <div className="text-2xl font-custom italic font-semibold bg-gradient-to-l from-purple-300 to-blue-400 bg-clip-text text-transparent ">
+                    CrewCanvas
+                </div>
+                <div className="flex items-center ml-15 gap-1 text-slate-300 p-2 rounded-xl px-3 cursor-pointer  hover:bg-[#131212]  group hover:-translate-y-0.5 duration-300">
                     <Home className="w-5 h-5" />
                     <span className="text-md font-medium">Dashboard</span>
                 </div>
@@ -24,22 +18,21 @@ const DashboardHeader: React.FC = () => {
 
             {/* Right Section: Icons + Profile */}
             <div className="flex items-center gap-4">
-                <Search className="w-5 h-5 hover:text-purple-500 cursor-pointer" />
-                <div className="relative">
-                    <Bell className="w-5 h-5 hover:text-purple-500 cursor-pointer" />
-                    <span className="absolute top-0 right-0 h-2 w-2 bg-purple-500 rounded-full"></span>
-                </div>
-                <HelpCircle className="w-5 h-5 hover:text-purple-500 cursor-pointer" />
-                <Moon className="w-5 h-5 hover:text-purple-500 cursor-pointer" />
-
                 {/* Profile Section */}
-                <div className="flex items-center gap-2 ml-4 cursor-pointer">
-                    <div className="w-8 h-8 rounded-full bg-gray-300"></div>
-                    <span className="font-medium text-md text-white">
-                        John Doe
+                <a
+                    className="flex items-center gap-2 ml-4 cursor-pointer  p-1 rounded-xl px-3   hover:bg-[#0c0c0c]  hover:-translate-y-1 duration-300"
+                    href="/"
+                >
+                    <img
+                        src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Profile"
+                        className="size-10 rounded-full object-cover"
+                    />
+                    <span className="text-lg mt-1 text-slate-200 hover:text-slate-300">
+                        John <span className="font-bold">Doe</span>
                     </span>
-                    <ChevronDown className="w-4 h-4" />
-                </div>
+                    <BottomGradient />
+                </a>
             </div>
         </header>
     );
