@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                         CrewCanvas
                     </div>
                     <div className="md:hidden">
-                        <button
+                        <a
                             className="menu-btn text-white hover:text-gray-600 duration-100"
                             onClick={() => setState(!state)}
                         >
@@ -50,7 +50,11 @@ const Header: React.FC = () => {
                                         stroke="currentColor"
                                         className="icon icon-tabler icons-tabler-outline icon-tabler-x"
                                     >
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        />
                                         <path d="M18 6l-12 12" />
                                         <path d="M6 6l12 12" />
                                     </svg>
@@ -69,7 +73,11 @@ const Header: React.FC = () => {
                                         strokeLinejoin="round"
                                         className="icon icon-tabler icons-tabler-outline icon-tabler-menu-3"
                                     >
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            stroke="none"
+                                            d="M0 0h24v24H0z"
+                                            fill="none"
+                                        />
                                         <path d="M10 6h10" />
                                         <path d="M4 12h16" />
                                         <path d="M7 12h13" />
@@ -77,7 +85,7 @@ const Header: React.FC = () => {
                                     </svg>
                                 </button>
                             )}
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -90,7 +98,7 @@ const Header: React.FC = () => {
                 >
                     <div className="flex gap-x-4 max-md:pb-5 md:gap-x-4 w-full justify-center md:justify-end items-center">
                         <button
-                            className={`group/btn relative py-[9px] px-5 rounded-md bg-[#27272A] font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center group`}
+                            className={`group/btn relative py-[9px] px-5 rounded-md bg-[#111111] font-medium text-white flex items-center group hover:translate-y-[-2px] duration-300`}
                         >
                             Sign Up
                             <svg
@@ -110,7 +118,7 @@ const Header: React.FC = () => {
                             <BottomGradient />
                         </button>
                         <button
-                            className={`group/btn relative py-[9px] px-5 rounded-md font-medium text-white bg-[#27272A] shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center group`}
+                            className={`group/btn relative py-[9px] px-5 rounded-md font-medium text-white bg-[#111111]  flex items-center group hover:translate-y-[-2px] duration-300`}
                         >
                             Login
                             <svg
