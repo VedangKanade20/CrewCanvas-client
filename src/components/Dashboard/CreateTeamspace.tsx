@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import ColorDropdown from '../ui/ColorDropdown';
 
 export function CreateTeamspace() {
   return (
@@ -37,36 +38,46 @@ export function CreateTeamspace() {
             <Button variant="default">Create Teamspace</Button>
           </div>
         </DialogTrigger>
-        <DialogContent className="md:min-w-[35vw] h-[50vh] text-slate-300 bg-[#131212] border border-gray-700 rounded-lg">
-          <DialogHeader>
+        <DialogContent className="md:min-w-[35vw] h-[50vh] text-slate-300 bg-[#131212] border border-gray-700 rounded-3xl ">
+          <DialogHeader className='pl-2'>
             <DialogTitle>Create New Teamspace</DialogTitle>
             <DialogDescription>
               Create a collaborative workspace for your team to work together.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid gap-4 py-4">
-            <div className=" flex flex-col gap-3 pl-3">
-              <Label htmlFor="TeamspaceName" className="pl-2 ">
-                Teamspace Name
-              </Label>
-              <Input id="TeamspaceName"  placeholder='Enter the name for you new Teamspace'  />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault(); /* Handle form submission */
+            }} className='-p-3'
+          >
+            <div className="flex flex-col gap-4 py-3">
+              <div className=" flex flex-col gap-3 pl-3 -mt-20">
+                <Label htmlFor="TeamspaceName" className="pl-2 ">
+                  Teamspace Name
+                </Label>
+                <Input id="TeamspaceName" placeholder="Enter the name for you new Teamspace" />
+              </div>
+              <div className=" flex flex-col gap-3 pl-3">
+                <Label htmlFor="description" className="pl-2 ">
+                  Description
+                </Label>
+                <Input id="name" value="Pedro Duarte" />
+              </div>
+              <div className="flex w-full gap-4">
+                {' '}
+                <div className="flex flex-col gap-3 pl-3 w-[80%]">
+                  <Label htmlFor="description" className="pl-2 ">
+                    Color
+                  </Label>
+                  <ColorDropdown />
+                </div>
+              </div>
+
+              <button className="w-1/3 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 dark:bg-gradient-to-r dark:from-purple-700 dark:to-blue-500 absolute bottom-6 right-8">
+                Explore Now
+              </button>
             </div>
-            <div className=" flex flex-col gap-3 pl-3">
-              <Label htmlFor="description" className="pl-2 ">
-                Description
-              </Label>
-              <Input id="name" value="Pedro Duarte"  />
-            </div>
-            <div className="flex flex-col gap-3 pl-3">
-              <Label htmlFor="description" className="pl-2 ">
-                Color
-              </Label>
-              <Input id="name" className="" />
-            </div>
-          </div>
-          <DialogFooter>
-            <Button type="submit">Save changes</Button>
-          </DialogFooter>
+          </form>
         </DialogContent>
       </Dialog>
     </div>
