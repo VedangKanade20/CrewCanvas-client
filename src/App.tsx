@@ -6,7 +6,7 @@ import SignupForm from "./components/Auth/SignupFormCard";
 import ResetPasswordFormCard from "./components/Auth/ResetPasswordFormCard";
 import ForgotPasswordFormCard from "./components/Auth/ForgotPasswordFormCard";
 import Dashboard from "./Pages/Dashboard";
-import {CreateTeamspace} from "./components/Dashboard/CreateTeamspace";
+
 
 export default function App() {
     return (
@@ -26,7 +26,7 @@ export default function App() {
                     />
 
                     <Route path="/dashboard" element={<Dashboard/>} />
-                    <Route path="/dashboard/create-teamspace" element={<CreateTeamspace />} /> 
+                    
                 </Routes>
                 
             </div>

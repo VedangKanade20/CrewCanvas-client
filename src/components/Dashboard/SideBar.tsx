@@ -95,7 +95,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="h-full w-[15%] bg-transparent border-r border-gray-200 flex flex-col justify-between p-4">
+    <aside className="h-full w-[15%] bg-transparent border-r border-gray-200 flex flex-col justify-between p-4 " >
       <nav className="space-y-4">
         {navigation.map((item) => (
           <a
