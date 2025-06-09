@@ -31,3 +31,8 @@ html {
 html, body {
   overflow-x: hidden;
 }
+
+html{ 
+  background: black;
+  font-family: 'Raleway';
+}
