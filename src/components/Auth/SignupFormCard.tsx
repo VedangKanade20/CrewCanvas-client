@@ -2,20 +2,31 @@ import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 export default function SignupForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
   };
+  const navigate = useNavigate()
   return (
     <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent  border border-[#27272A]">
+      <button
+        className="absolute top-5 left-5 flex text-slate-300 items-center hover:border-b duration-300 transition"
+        onClick={() => {
+          navigate('/');
+        }}
+      >
+        {' '}
+        <ArrowLeft size={18} /> Go back
+      </button>
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
         Welcome to Crew Canvas
       </h2>
       <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
-        Login to Crew canvas Account if you can because we don&apos;t have a
-        login flow y
+        Login to Crew canvas Account if you can because we don&apos;t have a login flow y
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
