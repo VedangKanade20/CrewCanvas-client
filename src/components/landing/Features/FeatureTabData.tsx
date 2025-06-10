@@ -1,6 +1,5 @@
 import { BottomGradient } from "@/components/Auth/ForgotPasswordFormCard";
-import { ReactNode, useRef } from "react";
-import { useInView, motion } from "framer-motion";
+import { ReactNode } from "react";
 
 interface props {
     icon: ReactNode;
@@ -11,16 +10,11 @@ interface props {
 
 const FeatureTabData = (props: props) => {
     const css = props.color;
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-100px" });
+
 
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-[40%] flex flex-col gap-2 text-white items-start max-md:w-full max-lg:w-[85%] "
+        <div
+            className="w-[35%] flex flex-col gap-2 text-white items-start max-md:w-full max-lg:w-[85%] max-lg:h-[90%]"
         >
             <div
                 className={`px-7 py-7 ${css} rounded-2xl max-md:px-5 max-md:py-5 flex justify-center items-center z-50 `}
@@ -54,7 +48,7 @@ const FeatureTabData = (props: props) => {
                 </svg>
                 <BottomGradient />
             </button>
-        </motion.div>
+        </div>
     );
 };
 

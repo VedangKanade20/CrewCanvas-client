@@ -3,7 +3,8 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Github } from "lucide-react";
+import { IconBrandGoogle } from "@tabler/icons-react";
 
 export default function SignupForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -12,7 +13,7 @@ export default function SignupForm() {
   };
   const navigate = useNavigate()
   return (
-    <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent  border border-[#27272A]">
+    <div className="shadow-input mx-auto w-full max-w-md rounded-md bg-white p-4 md:rounded-2xl md:p-8 dark:bg-transparent  border border-[#27272A]">
       <button
         className="absolute top-5 left-5 flex text-slate-300 items-center hover:border-b duration-300 transition"
         onClick={() => {
@@ -49,10 +50,26 @@ export default function SignupForm() {
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-purple-700 to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Register &rarr;
+          Sign Up &rarr;
           <BottomGradient />
         </button>
-
+        <div className=" flex gap-2 mt-3">
+        <button
+          className="group/btn relative bg-neutral-950/30 border border-neutral-800  h-10 w-[90%] rounded-md  font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center justify-center px-4 gap-2"
+          type="submit"
+        >
+            <IconBrandGoogle />Google 
+          <BottomGradient />
+        </button>
+          <button
+            className="group/btn relative bg-neutral-950/30 border border-neutral-800  h-10 w-[90%] rounded-md  font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset]  dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] flex items-center justify-center px-4 gap-2"
+            type="submit"
+          >
+            <Github />Github
+            <BottomGradient />
+          </button>
+        
+        </div>  
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
         <p className=" max-w-sm text-sm text-white mb-1">
           Not a User, <span className="font-bold">Create an account</span>:
@@ -61,7 +78,7 @@ export default function SignupForm() {
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-purple-700 to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] -mb-5 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Register &rarr;
+          log In &rarr;
           <BottomGradient />
         </button>
       </form>

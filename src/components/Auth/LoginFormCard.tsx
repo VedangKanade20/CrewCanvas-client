@@ -42,7 +42,7 @@ export default function LoginForm() {
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-purple-700 to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Sign In &rarr;
+          Log In &rarr;
           <BottomGradient />
         </button>
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
@@ -52,8 +52,11 @@ export default function LoginForm() {
         <button
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-purple-700 to-blue-700 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] -mb-5 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
+          onClick={() => {
+            navigate('/register');
+          }}
         >
-          Register &rarr;
+          Sign Up &rarr;
           <BottomGradient />
         </button>
       </form>

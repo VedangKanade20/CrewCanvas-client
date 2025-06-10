@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
     PenTool,
     NotebookPen,
@@ -12,18 +9,7 @@ import {
 import FeatureTabCard from "./FeatureTabCard";
 import FeatureTabData from "./FeatureTabData";
 
-const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
-        opacity: 1,
-        y: 0,
-        transition: {
-            delay: i * 0.15,
-            duration: 0.6,
-            ease: "easeOut",
-        },
-    }),
-};
+
 
 const sections = [
     {
@@ -98,25 +84,21 @@ const sections = [
 const FeatureSection = () => {
     return (
         <div className="flex flex-col gap-25">
-            <div className="text-stransparent w-full flex justify-center items-center flex-col gap-5 mb-10 max-lg:mb-5 max-md:mb-2 bg-gradient-to-r from-indigo-500 to-purple-500  bg-clip-text text-transparent ">
-                <h1 className="text-5xl font-semibold">
+            <div className="text-transparent w-full flex justify-center items-center flex-col gap-5 mb-10 max-lg:mb-5 max-md:mb-2 bg-gradient-to-r from-indigo-500 to-purple-500  bg-clip-text sm:flex  sm:items-center sm:justify-center ">
+                <h1 className="text-5xl font-semibold text-center max-md:text-3xl">
                     Everything you need to collaborate
                 </h1>
-                <p className="text-lg text-neutral-400 mt-2 max-md:text-sm max-lg:text-md  text-center px-[30%]">
+                <p className="text-lg text-neutral-400 mt-2 max-md:text-sm max-lg:text-md  text-center ms:px-[30%]">
                     CrewCanvas combines the best collaboration tools in one
                     seamless platform, helping your team work together more
                     effectively.
                 </p>
             </div>
-            {sections.map((sec, i) => (
-                <motion.div
-                    key={i}
-                    className="flex gap-20 max-lg:flex-col justify-center items-center duration-500 max-lg:items-start max-md:items-center"
-                    variants={fadeInUp}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    custom={i}
+            {sections.map((sec) => (
+                <div
+
+                    className="flex gap-25 max-lg:flex-col justify-center items-center duration-500 max-lg:items-center max-md:items-center"
+
                 >
                     {sec.left ? (
                         <>
@@ -147,7 +129,7 @@ const FeatureSection = () => {
                             />
                         </>
                     )}
-                </motion.div>
+                </div>
             ))}
         </div>
     );

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { BottomGradient } from "../Auth/LoginFormCard";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
     const [state, setState] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         document.onclick = (e: MouseEvent) => {
@@ -40,7 +42,7 @@ const Header: React.FC = () => {
                             onClick={() => setState(!state)}
                         >
                             {state ? (
-                                <button className="border border-[#171717] hover:text-white p-2 rounded-full hover:scale-110 duration-400 hover:rotate-90">
+                                <button className="border border-[#171717] hover:text-white p-2 rounded-full hover:scale-110 duration-400 hover:rotate-90" onClick={() => { setState(!state); navigate('/') }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -60,7 +62,8 @@ const Header: React.FC = () => {
                                     </svg>
                                 </button>
                             ) : (
-                                <button className="border border-[#171717] hover:text-neutral-400 p-2 rounded-full hover:scale-115 duration-400">
+
+                                <button className="border border-[#171717] hover:text-neutral-400 p-2 rounded-full hover:scale-115 duration-400 " onClick={() => { setState(!state); navigate('/') }}> 
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="24"
@@ -99,6 +102,7 @@ const Header: React.FC = () => {
                     <div className="flex gap-x-4 max-md:pb-5 md:gap-x-4 w-full justify-center md:justify-end items-center">
                         <button
                             className={`group/btn relative py-[9px] px-5 rounded-md bg-[#111111] font-medium text-white flex items-center group hover:translate-y-[-2px] duration-300`}
+                            onClick={() => navigate('/signup')}
                         >
                             Sign Up
                             <svg
@@ -119,6 +123,7 @@ const Header: React.FC = () => {
                         </button>
                         <button
                             className={`group/btn relative py-[9px] px-5 rounded-md font-medium text-white bg-[#111111]  flex items-center group hover:translate-y-[-2px] duration-300`}
+                            onClick={() => navigate('/login')}
                         >
                             Login
                             <svg

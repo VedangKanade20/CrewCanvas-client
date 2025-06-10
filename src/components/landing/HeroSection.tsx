@@ -94,13 +94,13 @@ export default function HeroSectionOne() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 1.3 }}
-                    className="relative mt-20 flex justify-center items-center rounded-3xl border border-neutral-200 bg-neutral-100 p-2 shadow-md dark:border-neutral-800 dark:bg-neutral-900 z-0"
+                    className="relative mt-20 flex justify-center items-center rounded-3xl sm:border border-neutral-200 bg-neutral-100 sm:p-3 shadow-md dark:border-neutral-800 dark:bg-neutral-900 z-0"
                 >
-                    <div className="w-full overflow-hidden rounded-xl border border-gray-300 dark:border-gray-700 flex justify-center items-center">
+                    <div className=" overflow-hidden rounded-xl sm:border border-gray-300 dark:border-gray-700 flex justify-center items-center">
                         <img
                             src="/image.png"
                             alt="Landing page preview"
-                            className="w-full object-cover h-[400px] md:h-auto"
+                            className="object-cover   "
                             height={1000}
                             width={1000}
                         />
